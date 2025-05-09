@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.querySelector('.input-field[placeholder="Email"]');
     const messageInput = document.querySelector('textarea[placeholder="Message"]');
 
-    formButton.addEventListener('click', (event) => {
+    formButton.addEventListener('send', (event) => {
         event.preventDefault(); // Prevent the default form submission behavior
 
         const name = nameInput.value.trim();
@@ -71,18 +71,3 @@ window.addEventListener('scroll', () => {
     }
     lastScrollY = window.scrollY;
 });
-function toggleDarkMode() {
-  const body = document.body;
-  const icon = document.getElementById("mode-icon");
-
-  body.classList.toggle("dark-mode");
-
-  // Switch icon
-  if (body.classList.contains("dark-mode")) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-  } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
-  }
-}
